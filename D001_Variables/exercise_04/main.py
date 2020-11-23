@@ -6,8 +6,9 @@ b = input("b: ")
 ####################################
 #Write your code below this line 👇
 
-
-
+aux = a
+a = b
+b = aux
 
 #Write your code above this line 👆
 ####################################
