@@ -23,11 +23,3 @@ remainingWeeks = YEAR_WEEKS * remainingYears
 remainingMonths = YEAR_MONTHS * remainingYears
 
 print(f'You have {remainingDays} days, {remainingWeeks} weeks, and {remainingMonths} months left')
-
-
-
-
-
-
-
-
