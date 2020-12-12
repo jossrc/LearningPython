@@ -14,3 +14,12 @@ states_of_america.append("Alaska")
 states_of_america.extend(["New York", "Virginia", "California"])
 
 print(states_of_america)
+
+# Nested Lists
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty_dozen = [fruits, vegetables]
+print(dirty_dozen)  # [ [...], [...] ]
+print(dirty_dozen[1][1])
+
