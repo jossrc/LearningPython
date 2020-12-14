@@ -18,23 +18,14 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 password = []
 
 for nr in range(1, nr_letters + 1):
-    random_position = random.randint(1, len(letters) - 1)
-    password.append(letters[random_position])
+    password.append(random.choice(letters))
 
 for nr in range(1, nr_symbols + 1):
-    random_position = random.randint(1, len(symbols) - 1)
-    password.append(symbols[random_position])
+    password.append(random.choice(symbols))
 
 for nr in range(1, nr_numbers + 1):
-    random_position = random.randint(1, len(numbers) - 1)
-    password.append(numbers[random_position])
+    password.append(random.choice(numbers))
 
-aux = ""
-
-for position in range(1, len(password)):
-    random_position = random.randint(1, len(password) - 1)
-    aux = password[position]
-    password[position] = password[random_position]
-    password[random_position] = aux
+random.shuffle(password)  # Reorders a list
 
 print("".join(password))
