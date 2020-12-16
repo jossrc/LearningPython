@@ -1,9 +1,13 @@
+import math
+
+
 # Write your code below this line 👇
 
-
-
-
-
+def paint_calc(height, width, cover):
+    area = height * width
+    calc = area / cover
+    number_of_cans = math.ceil(calc)
+    print(f"You'll need {number_of_cans} cans of paint")
 
 
 # Write your code above this line 👆
