@@ -20,7 +20,7 @@ while not end_of_game:
     exists = False
 
     for letter in chosen_word:
-        if letter == guess and display.count(letter) == 0:
+        if letter == guess and letter not in display:
             exists = True
             break
 
@@ -34,7 +34,7 @@ while not end_of_game:
 
     print(display)
 
-    if display.count("_") == 0:
+    if "_" not in display:
         end_of_game = True
         win = True
 
