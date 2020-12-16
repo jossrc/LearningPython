@@ -1,4 +1,5 @@
 import random
+import graphics
 
 word_list = ["aardvark", "baboon", "camel"]
 
@@ -14,8 +15,9 @@ for _ in range(word_length):
 
 win = False
 end_of_game = False
+lives = 6
 
-while not end_of_game:
+while not end_of_game and lives > 0:
     guess = input("Guess a letter: ").lower()
     exists = False
 
@@ -30,9 +32,10 @@ while not end_of_game:
             if letter == guess:
                 display[position] = guess
     else:
-        print("Wrong !!")
+        lives -= 1
 
     print(display)
+    print(graphics.stages[lives])
 
     if "_" not in display:
         end_of_game = True
@@ -40,3 +43,5 @@ while not end_of_game:
 
 if win:
     print("You win")
+else:
+    print("You lose")
