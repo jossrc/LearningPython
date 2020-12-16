@@ -1,11 +1,8 @@
 import random
 import hangman_art
+import hangman_words
 
-word_list = ["aardvark", "baboon", "camel"]
-
-chosen_word = random.choice(word_list)
-
-print(f"Psst, the solution is {chosen_word}")
+chosen_word = random.choice(hangman_words.word_list)
 
 display = []
 word_length = len(chosen_word)
@@ -16,6 +13,8 @@ for _ in range(word_length):
 win = False
 end_of_game = False
 lives = 6
+
+print(hangman_art.logo)
 
 while not end_of_game and lives > 0:
     guess = input("Guess a letter: ").lower()
