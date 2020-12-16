@@ -1,5 +1,5 @@
 import random
-import graphics
+import hangman_art
 
 word_list = ["aardvark", "baboon", "camel"]
 
@@ -35,7 +35,7 @@ while not end_of_game and lives > 0:
         lives -= 1
 
     print(display)
-    print(graphics.stages[lives])
+    print(hangman_art.stages[lives])
 
     if "_" not in display:
         end_of_game = True
