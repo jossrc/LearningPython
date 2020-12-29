@@ -35,8 +35,14 @@ for symbol in operations:
     print(symbol)
 
 operation_symbol = input("Pick an operation from the line above: ")
-
 function = operations[operation_symbol]
-answer = function(num1, num2)
+first_answer = function(num1, num2)
 
-print(f"{num1} {operation_symbol} {num2} = {answer}")
+print(f"{num1} {operation_symbol} {num2} = {first_answer}")
+
+operation_symbol = input("Pick another operation: ")
+num3 = int(input("What's the next number?: "))
+function = operations[operation_symbol]
+second_answer = function(first_answer, num3)
+
+print(f"{first_answer} {operation_symbol} {num3} = {second_answer}")
