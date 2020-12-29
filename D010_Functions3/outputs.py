@@ -1,7 +1,13 @@
 # Functions with Outputs
 
 def format_name(f_name, l_name):
+    """
+      :type f_name: str
+      :type l_name: str
 
+      Take a first and last name and format it
+      to return the title case version of the name.
+    """
     if f_name.strip() == "" or l_name.strip() == "":
         return "You didn't provide valid inputs."  # Be careful, return -> None
 
