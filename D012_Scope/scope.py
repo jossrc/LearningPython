@@ -65,3 +65,9 @@ def increase_monsters():
 increase_monsters()
 print(f"Monster outside function: {monster}")
 print(number_of_monsters)
+
+# Global Constants
+
+PI = 3.14159
+URL = "https://google.com"
+TWITTER_HANDLE = "@jossrc10"
