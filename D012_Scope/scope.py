@@ -41,6 +41,7 @@ print(player_health)
 
 game_level = 3
 
+
 def create_enemy():
     new_enemies = ["Skeleton", "Zombie", "Alien"]
     if game_level < 5:
@@ -48,3 +49,19 @@ def create_enemy():
 
     print(new_enemy)
 
+
+# Modifying Global Scope
+
+monster = "Skeleton"
+number_of_monsters = 1
+
+def increase_monsters():
+    monster = "Mega Zombie"
+    global number_of_monsters
+    number_of_monsters += 3
+    print(f"Monster inside function: {monster}")
+
+
+increase_monsters()
+print(f"Monster outside function: {monster}")
+print(number_of_monsters)
