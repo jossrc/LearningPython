@@ -1,3 +1,4 @@
+import prettytable
 from turtle import Turtle, Screen
 
 timmy = Turtle()
