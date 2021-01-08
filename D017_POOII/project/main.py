@@ -12,4 +12,5 @@ for question in question_data:
 
 game = QuizBrain(question_bank)
 
-print(question_bank)
+while game.still_has_questions():
+    answer = game.next_question()
