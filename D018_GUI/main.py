@@ -6,18 +6,30 @@ timmy.shape("turtle")
 timmy.color("red")
 
 
-# Draw a Square
+# Move turtle
 
 def move_turtle(turtle, angle, steps):
     turtle.forward(steps)
     turtle.right(angle)
 
 
-SIDES_OF_A_SQUARE = 4
+# Draw a dashed line
 
+def draw_dashed_line(turtle, steps):
+    for _ in range(steps):
+        turtle.dot()
+        turtle.penup()
+        turtle.forward(steps)
+
+
+SIDES_OF_A_SQUARE = 4
 
 for _ in range(SIDES_OF_A_SQUARE):
     move_turtle(timmy, 90, 100)
+
+timmy.left(90)
+
+draw_dashed_line(timmy, 10)
 
 screen = t.Screen()
 screen.exitonclick()
