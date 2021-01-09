@@ -2,17 +2,24 @@ import turtle as t
 import random
 
 tim = t.Turtle()
-tim.shape("turtle")
-tim.color("blue")
+t.colormode(255)
 
-directions = [tim.forward, tim.backward, tim.right, tim.left]
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return r, g, b
+
+
+tim.shape("turtle")
+tim.pensize(15)
+# tim.speed("fastest")
 
 while True:
-    steps = random.randint(10, 30)
-    move = random.choice(directions)
-    angle = random.randint(1, 3) * 90
+    tim.color(random_color())
+    steps = 30
+    angle = random.randint(0, 3) * 90
 
-    if move == tim.forward or move == tim.backward:
-         move(steps)
-    else:
-        move(angle)
+    tim.forward(steps)
+    tim.setheading(angle)
