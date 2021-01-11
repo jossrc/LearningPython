@@ -1,4 +1,6 @@
 import colorgram
+import random
+import turtle as t
 
 
 def extract_colors_from(img: str, count: int):
@@ -14,4 +16,10 @@ def extract_colors_from(img: str, count: int):
 
 rgb_color_list = extract_colors_from('image.jpg', 30)
 
-print(rgb_color_list)
+
+def draw_dashed_line(turtle: t.Turtle, space: float, steps: int):
+    for _ in range(steps):
+        turtle.dot(20, random.choice(rgb_color_list))
+        turtle.penup()
+        turtle.forward(space)
+
