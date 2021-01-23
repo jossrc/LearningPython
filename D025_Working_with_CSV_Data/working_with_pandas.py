@@ -9,4 +9,44 @@ import pandas
 """
 
 data = pandas.read_csv("weather_data.csv")
-print(data["temp"])
+# print(type(data)) -> DataFrame
+# print(type(data["temp"])) -> Series
+
+print(data.to_dict())
+
+series_temp = data["temp"]
+print(series_temp)
+
+temp_list = series_temp.tolist()
+print(temp_list)
+
+# Average
+
+average = series_temp.mean()
+print(round(average, 2))
+
+# Max
+
+maximum_temperature = series_temp.max()
+print(maximum_temperature)
+
+# Get data in row
+
+print(data[data.day == "Wednesday"])
+
+print(data[data.temp == maximum_temperature])
+
+monday = data[data.day == "Monday"]
+monday_temp = int(monday.temp)
+monday_temp_F = monday_temp * 9/5 + 32
+print(monday_temp_F)
+
+# Create a Dataframe from scratch
+
+data_dict = {
+    "students": ["Amy", "James", "Angela"],
+    "scores": [76, 56, 65]
+}
+
+data = pandas.DataFrame(data_dict)
+data.to_csv("new_data.csv")
